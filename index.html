@@ -27,7 +27,7 @@
     </ul>
     <a href="mymedia.html">MyMedia link</a>
 <hr>
-<h4>TedX Talks</h4>
+<h4>TedX Talks Table</h4>
 <p>I frequently watch tedx talks and they are my go-to videos.If I had to recommend someone to try I would tell them to watch below 4 videos:</p>
 <table>
     <tr>
@@ -57,5 +57,35 @@
     </tr>
     </tr>
     </table>
+    <hr>
+    <h4>Code Display</h4>
+    <p>This Python code snippet creates a stream.</p>
+    <pre>
+        def processor(reader, converter, writer):
+    while True:
+        data = reader.read()
+        if not data:
+            break
+        data = converter(data)
+        writer.write(data)
+
+
+class Processor:
+    def __init__(self, reader, writer):
+        self.reader = reader
+        self.writer = writer
+
+    def process(self):
+        while True:
+            data = self.reader.readline()
+            if not data:
+                break
+            data = self.converter(data)
+            self.writer.write(data)
+
+    def converter(data):
+        assert False, 'converter must be defined'
+    </pre>
+    <a href="https://code.pieces.app/collections/python">Create own data stream using python.</a>
 
 </html>
